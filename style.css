@@ -1,145 +1,150 @@
 * {
   box-sizing: border-box;
-}
+} /* 전체 스타일 초기화 : 내가 설정한 width보다 박스가 더 커지지 않게 */
+
 body {
-  background-color: #838383; /* 배경색: 옅은 회색 */
+  height: 100vh; /* 화면 꽉 채우기 */
   display: flex;
+  margin: 0;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* 화면 꽉 채우기 */
-  margin: 0;
+
+  background-color: #929191; /* 배경색: 옅은 회색 */
 }
 
 /* 메인 카드 */
 .login-card {
+  width: 1000px;
+  height: 450px;
   display: flex;
-  width: 1100px;           /* 전체 카드 너비 */
-  height: 500px;          /* 전체 카드 높이 */
-  padding: 50px;  
-  padding-top: 30px;
+  border: 3px solid #000000;
+  border-radius: 20px;
+  padding: 40px;
+  padding-top: 20px; /* 카드 내부 여백 */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /*그림자효과*/
 
-  background-color: #525252;  /* 카드 안쪽: 짙은회색 */
-  border: 3px solid #000000; /* 테두리: 검은색 */
-  border-radius: 20px;     /* 테두리 모서리 둥글게 */
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5); /*그림자효과*/
+  background-color: #525252; /* 카드 안쪽: 짙은회색 */
 }
 
 /* 왼쪽 섹션 */
 .left-section {
-  flex: 6;
+  flex: 6; /* 왼쪽, 오른쪽 영역 비율 (6:4) */
   display: flex;
   flex-direction: column; /* 전체를 3층으로 쌓음 */
-  gap: px;
+  gap: 10px;
+
   color: white;
 }
 
 .row-box {
-  display: flex;
-  flex-direction: column; 
-  align-items: flex-start;    
-  justify-content: flex-start;
   width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 /* 1층: 이미지+제목 */
 .profile-header {
-  flex-direction: row; 
-  justify-content: flex-start; 
-  align-items: center;    
-  gap: 15px;              
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
   width: 100%;
-  padding: 10px 0;      
+  padding: 10px 0;
 }
 
 .profile-header img {
-  width: 70px;             
+  width: 70px;
 }
 
 .profile-header h2 {
-  margin: 0;              
-  font-size: 1.5rem;     
+  margin: 0;
+  font-size: 1.5rem;
   line-height: 1.5;
+  text-align: left;
   color: white;
-  text-align: left; 
 }
 
-/* 2층: 설명글 스타일 */
+/* 2층 */
 .description p {
-  color: #aaacaf; /* 설명글 색상: 연한 회색 */
   margin: 5px 0;
-  font-size: 1.1rem; /* 폰트 크기 딱 맞게*/
+  font-size: 115%;
   line-height: 1.4;
+  color: #aaacaf; /* 설명글 색상: 연한 회색 */
 }
 
 /* 3층 */
 .footer-boxes {
-  flex-direction: row; 
+  /* margin-top: 20px; */
+  flex-direction: row;
   gap: 15px;
-  margin-top: 20px;
 }
 
-.small-box h2{
-    font-weight: bold;
-    color: #000;
-    margin-top: 40px;
+.small-box h2 {
+  margin-top: 40px;
+  font-weight: 990; /* bold보다 더 굵게 */
+  color: #000;
 }
 
 /*버튼으로 수정해야댐*/
 .small-box {
-  width: 100%;
+  width: 90%;
   height: 100px;
+  display: flex;
+  border-radius: 15px;
+  justify-content: center;
+
   /* 배경색 수정사힝 -> 선택 안 함: 흰색 / 선택함: 주황색 */
   background-color: #fff;
-  border-radius: 15px;
-  display: flex;
-  justify-content: center;
 }
 
 /* 오른쪽 섹션 */
 .right-section {
+  padding: 0;
   flex: 4;
   display: flex;
-  padding-right: 20px;
-  align-items: center;
+  /* 핵심: 가로와 세로 모두 중앙으로 정렬합니다. */
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
 }
 
-.login-container h2{
-    font-style: italic;
-    font-weight: 990;
-    color: #fffafa;
-    margin-bottom: 20px;
-    margin-top: 10px;
+.login-container h2 {
+  font-style: italic;
+  font-weight: 990;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  color: #fffafa;
 }
 
 .login-container {
-  width: 300%;/* 로그인 창 너비 */
-  max-width: 400px; /* 최대 너비 제한 */
-  padding: 30px; /* 로그인 창 내부 여백 */
-  background-color: #000000;/* 로그인 창 배경색: 검은색 */
-  border-radius: 30px; /* 테두리 모서리 둥글게 */
+  width: 90%;
+  max-width: 350px;
+  margin: 0;
+  border-radius: 30px;
+  padding: 25px; /* 로그인 창 내부 여백 */
   text-align: center;
-  margin: 0; /* 로그인 창을 오른쪽 섹션 중앙에 배치 */
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5); /*그림자효과*/
-
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /*그림자효과*/
+  background-color: #000000; /* 로그인 창 배경색: 검은색 */
 }
 
 .login-input {
-  width: 80%;            /* 부모 박스 너비에 맞춤 */
-  padding: 12px;          /* 입력창 내부 여백 (글자가 벽에 붙지 않게) */
-  margin-bottom: 15px;    /* 입력창끼리의 간격 (바깥 여백) */
+  width: 80%;
+  margin-bottom: 12px; /* 입력창끼리의 간격 (바깥 여백) */
   border: 1px solid #ccc;
   border-radius: 20px;
+  padding: 12px; /* 입력창 내부 여백 (글자가 벽에 붙지 않게) */
 }
 
 .login-btn {
   width: 100%;
-  padding: 15px;
-  background-color: orange;
-  margin-top: 15px;
-  margin-bottom: none;
   border: 30px;
   border-radius: 35px;
+  margin-top: 15px;
+  margin-bottom: none;
+  padding: 15px;
   cursor: pointer;
   font-weight: bold;
   color: #fffafa;
+  background-color: orange;
 }
