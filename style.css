@@ -55,12 +55,12 @@ body {
 }
 
 .profile-header img {
-  width: 70px;
+  width: 75px;
 }
 
 .profile-header h2 {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 150%;
   line-height: 1.5;
   text-align: left;
   color: white;
@@ -74,29 +74,35 @@ body {
   color: #aaacaf; /* 설명글 색상: 연한 회색 */
 }
 
-/* 3층 */
+/* 3층  */
 .footer-boxes {
-  /* margin-top: 20px; */
-  flex-direction: row;
-  gap: 15px;
+  display: flex;       
+  flex-direction: row; 
+  gap: 12px;          
+}
+
+.small-box {
+  width: 90%;
+  height: 105px;
+  flex: 1;           
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;    
 }
 
 .small-box h2 {
-  margin-top: 40px;
-  font-weight: 990; /* bold보다 더 굵게 */
+  font-size: 170%;
+  font-weight: 900; 
   color: #000;
 }
 
-/*버튼으로 수정해야댐*/
-.small-box {
-  width: 90%;
-  height: 100px;
-  display: flex;
-  border-radius: 15px;
-  justify-content: center;
-
-  /* 배경색 수정사힝 -> 선택 안 함: 흰색 / 선택함: 주황색 */
+.small-box.white {
   background-color: #fff;
+}
+
+.small-box.orange {
+  background-color: rgb(255, 166, 0);
 }
 
 /* 오른쪽 섹션 */
@@ -104,9 +110,8 @@ body {
   padding: 0;
   flex: 4;
   display: flex;
-  /* 핵심: 가로와 세로 모두 중앙으로 정렬합니다. */
-  justify-content: center; /* 가로 중앙 정렬 */
-  align-items: center; /* 세로 중앙 정렬 */
+  justify-content: center;
+  align-items: center;
 }
 
 .login-container h2 {
@@ -114,7 +119,7 @@ body {
   font-weight: 990;
   margin-bottom: 20px;
   margin-top: 10px;
-  color: #fffafa;
+  color: #ffFfff; /* 로그인 제목 색상: 흰색 */
 }
 
 .login-container {
@@ -122,18 +127,17 @@ body {
   max-width: 350px;
   margin: 0;
   border-radius: 30px;
-  padding: 25px; /* 로그인 창 내부 여백 */
+  padding: 25px; 
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /*그림자효과*/
-  background-color: #000000; /* 로그인 창 배경색: 검은색 */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* 그림자효과 */
+  background-color: #000622; /* 로그인 창 배경색: 짙은 파란색 */
 }
 
 .login-input {
   width: 80%;
-  margin-bottom: 12px; /* 입력창끼리의 간격 (바깥 여백) */
-  border: 1px solid #ccc;
+  margin-bottom: 12px; 
   border-radius: 20px;
-  padding: 12px; /* 입력창 내부 여백 (글자가 벽에 붙지 않게) */
+  padding: 12px; 
 }
 
 .login-btn {
@@ -146,5 +150,5 @@ body {
   cursor: pointer;
   font-weight: bold;
   color: #fffafa;
-  background-color: orange;
+  background-color: rgb(255, 166, 0);
 }
